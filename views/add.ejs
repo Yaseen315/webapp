@@ -1,0 +1,28 @@
+<%- include  header.ejs %>
+<main>
+        <h2>Add Recipe</h2>
+      
+      
+        <form action="/add/submit" method="POST">
+          <label for="Recipe Name">Recipe Name</label>
+          <br>
+          <input type="text" name="Recipe Name"></input>
+          <br>
+          <label for="Preperation Time">Preperation Time</label>
+          <br>
+          <input type="text" name="Preperation Time"></input>
+          <br>
+          <label for="author">Author</label>
+          <br>
+          <input type="text" name="author"></input>
+          <br>
+          <label for="title">Description</label>
+          <br>
+          <textarea rows="5" name="description"></textarea>
+          <br>
+          <button type="submit" name="submit">Add</button>
+        </form>
+      
+    
+</main>
+<%- include  footer.ejs %>
