@@ -7,8 +7,8 @@
 
 .app-container{
     /* The app can only be the height of the viewport */
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     /* Do NOT allow the app to scroll off the screen */
     overflow: hidden;
@@ -20,7 +20,8 @@
 .menu-container li{
   display: flex;
   flex-direction: row;
-  background-color: #f6f6f6;
+  /* background-color: #f6f6f6; */
+  background-color: rgba(219, 47, 47, 0.466);
   margin-left: 15px;
   margin-top: 15px;
   margin-bottom: 10px;
@@ -103,6 +104,9 @@ footer{
     margin-bottom: 5px
   }
   
+  .fa{
+    color: rgba(175, 26, 26, 0.767);
+  }
 
 
 
