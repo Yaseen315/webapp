@@ -1,6 +1,43 @@
 <%- include  header.ejs %>
-<main>
+<main> 
+        <ul class="tab-navigation">
+                <li>Feed+</li>
+                <li>Student</li>
+                <li>Quick</li>
+        </ul>
+        <ul class="tab-content">
+            <li class="active"
+            <li>hiiujoijopjo</li>
+            <li class="student"> 
 
+                <% for (var i = 0; i < recipe2.length; i++){ %>
+                    <a href="/detail">
+                        <img src="turkishpizza.jpg"/>
+                        <h2><%= recipe2[i].name %></h2>
+                        <h4><%= recipe2[i].prepTime %></h4>
+                        <h4><%= recipe2[i].cuisine %></h4>
+                    </a>
+                <% } %>
+
+            </li>
+            <li>cdieusdekd</li>
+        </ul>     
+<script>
+    let navLinks = document.querySelectorAll("ul.tab-navigation li");
+
+navLinks.forEach(function(navLink, i){
+  navLink.addEventListener("click", function(e){
     
+    let tabContents = document.querySelectorAll("ul.tab-content li");
+    tabContents.forEach(function(tabContent, j){
+      tabContent.classList=""
+      if (i === j){
+        tabContent.classList = "active"
+      }
+    })
+    
+  })
+})
+</script>
 </main>
 <%- include  footer.ejs %>

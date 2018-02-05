@@ -1,134 +1,16 @@
 <%- include  header.ejs %>
 <main>
     <ul class="menu-container">
+        <% for (var i = 0; i < recipe.length; i++){ %>
         <li>
-              
-            <img src="turkishpizza.jpg"/>
-            <div>
-            <h2>Turkish Pizza</h2>
-            <h4>Preperation Time: 10 mins</h4>
-             <h4>Cuisine: Turkish</h4>
-            </div>
+            <a href="/detail">
+                <img src="turkishpizza.jpg"/>
+                <h2><%= recipe[i].name %></h2>
+                <h4><%= recipe[i].prepTime %></h4>
+                <h4><%= recipe[i].cuisine %></h4>
+            </a>
         </li>
-          
-        <li>
-                        
-            <img src="turkishpizza.jpg"/>
-            <div>
-            <h2>Turkish Pizza</h2>
-            <h4>Preperation Time: 10 mins</h4>
-             <h4>Cuisine: Turkish</h4>
-            </div>
-        </li>
-          
-        <li>
-                        
-            <img src="turkishpizza.jpg"/>
-            <div>
-            <h2>Turkish Pizza</h2>
-            <h4>Preperation Time: 10 mins</h4>
-             <h4>Cuisine: Turkish</h4>
-            </div>
-        </li>
-        <li>
-                        
-            <img src="turkishpizza.jpg"/>
-            <div>
-            <h2>Turkish Pizza</h2>
-            <h4>Preperation Time: 10 mins</h4>
-             <h4>Cuisine: Turkish</h4>
-            </div>
-        </li>
-        <li>
-                        
-            <img src="turkishpizza.jpg"/>
-            <div>
-            <h2>Turkish Pizza</h2>
-            <h4>Preperation Time: 10 mins</h4>
-             <h4>Cuisine: Turkish</h4>
-            </div>
-        </li>
-        <li>
-                        
-            <img src="turkishpizza.jpg"/>
-            <div>
-            <h2>Turkish Pizza</h2>
-            <h4>Preperation Time: 10 mins</h4>
-             <h4>Cuisine: Turkish</h4>
-            </div>
-        </li>
-        <li>
-                        
-            <img src="turkishpizza.jpg"/>
-            <div>
-            <h2>Turkish Pizza</h2>
-            <h4>Preperation Time: 10 mins</h4>
-             <h4>Cuisine: Turkish</h4>
-            </div>
-        </li>
-        <li>
-                        
-            <img src="turkishpizza.jpg"/>
-            <div>
-            <h2>Turkish Pizza</h2>
-            <h4>Preperation Time: 10 mins</h4>
-             <h4>Cuisine: Turkish</h4>
-            </div>
-        </li>
-        <li>
-                        
-            <img src="turkishpizza.jpg"/>
-            <div>
-            <h2>Turkish Pizza</h2>
-            <h4>Preperation Time: 10 mins</h4>
-             <h4>Cuisine: Turkish</h4>
-            </div>
-        </li>
-        <li>
-                        
-            <img src="turkishpizza.jpg"/>
-            <div>
-            <h2>Turkish Pizza</h2>
-            <h4>Preperation Time: 10 mins</h4>
-             <h4>Cuisine: Turkish</h4>
-            </div>
-        </li>
-        <li>
-                        
-            <img src="turkishpizza.jpg"/>
-            <div>
-            <h2>Turkish Pizza</h2>
-            <h4>Preperation Time: 10 mins</h4>
-             <h4>Cuisine: Turkish</h4>
-            </div>
-        </li>
-        <li>
-                        
-            <img src="turkishpizza.jpg"/>
-            <div>
-            <h2>Turkish Pizza</h2>
-            <h4>Preperation Time: 10 mins</h4>
-             <h4>Cuisine: Turkish</h4>
-            </div>
-        </li>
-        <li>
-                        
-            <img src="turkishpizza.jpg"/>
-            <div>
-            <h2>Turkish Pizza</h2>
-            <h4>Preperation Time: 10 mins</h4>
-             <h4>Cuisine: Turkish</h4>
-            </div>
-        </li>
-        <li>
-                        
-            <img src="turkishpizza.jpg"/>
-            <div>
-            <h2>Turkish Pizza</h2>
-            <h4>Preperation Time: 10 mins</h4>
-             <h4>Cuisine: Turkish</h4>
-            </div>
-        </li>
+        <% } %>  
     </ul>
     
 </main>
