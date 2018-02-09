@@ -116,7 +116,7 @@ footer{
   color: black
 }
 
-.detail-container{
+/* .detail-container{
   display: flex;
   flex-direction: column;
   box-shadow: 20%;
@@ -135,7 +135,7 @@ footer{
 
 .detail.img{
   width: 10%;
-}
+} */
 
 @media screen and (min-width: 500px ){
  

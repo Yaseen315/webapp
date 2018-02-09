@@ -1,103 +1,43 @@
 var express = require("express");
 var path = require("path");
 var app = express();
+var mongoose = require("mongoose")
+var bodyParser = require('body-parser');
+
+var recipeController = require("./controllers/recipeController");
+
+
+var mongoUrl = process.env.MONGODB_URI;
+mongoose.connect(mongoUrl, function(err){
+  if(err) return console.log(err);
+  console.log("DB connection open!");
+});
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
-
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get("/", function(req, res){
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
-  var recipe = [
-    {
-      image:"turkishpizza.jpg",
-      name: "Turkish Pizza",
-      prepTime: "30",
-      cuisine: "Turkish"
-    },
-    {
-      name: "Inari",
-      prepTime: "34",
-      cuisine: "Japanese"
-    },
-    {
-      name: "Lasagne",
-      prepTime: "60",
-      cuisine: "Italian"
-    },
-    {
-      name: "Pasta",
-      prepTime: "30mins",
-      cuisine: "Italian"
-    },
-    {
-      name: "Pasta",
-      prepTime: "30mins",
-      cuisine: "Italian"
-    },
+app.get("/", recipeController.getExplore)
 
-  ]
+app.get("/detail/:id", recipeController.getDetail)
 
-  res.render('explore', {
-    recipe: recipe
-  });
-});
+app.get("/add", recipeController.getNew)
 
-app.get('/', function(req, res){
-
-  var recipe2 = [
-    {
-      name: "Turkish Pizza",
-      prepTime: "30",
-      cuisine: "Turkish"
-    },
-    {
-      name: "Inari",
-      prepTime: "34",
-      cuisine: "Japanese"
-    },
-    {
-      name: "Lasagne",
-      prepTime: "60",
-      cuisine: "Italian"
-    },
-    {
-      name: "Pasta",
-      prepTime: "30mins",
-      cuisine: "Italian"
-    },
-    {
-      name: "Pasta",
-      prepTime: "30mins",
-      cuisine: "Italian"
-    },
-
-  ]
-
-  res.render('categories', {
-    recipe2: recipe2
-  });
-});
-
-app.get("/add", function(req, res){
-  res.render('add');
-});
-
-app.get("/detail", function(req, res){
-  res.render('detail');
-});
-
-// app.get("/categories", function(req, res){
-//   res.render('categories');
+// app.get("/detail", function(req, res){
+//   res.render('detail');
 // });
 
-app.post("/add/submit", function(req, res){
-  res.send("yay")
-});
+app.get("/categories", recipeController.getCategories)
+
+app.post("/add/submit", recipeController.postNew)
+app.post('/detail/:id/delete', recipeController.delete)
 
 
 app.listen(4000, function(){
   console.log("Server is running");
 });
 
+module.exports = app;

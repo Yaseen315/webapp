@@ -1,28 +1,36 @@
 <%- include  header.ejs %>
 <main>
         <h2>Add Recipe</h2>
-      
-      
+        <% if(status === 'success'){ %>
+          <div>Your book was added successfully.</div>
+          <% } else if (status === 'error'){ %>
+            <div>There was a problem adding that book. Please check form for errors.</div>
+            <% } %>
+            
         <form action="/add/submit" method="POST">
-          <label for="Recipe Name">Recipe Name</label>
+          <label for="name">Recipe Name</label>
           <br>
-          <input type="text" name="Recipe Name"></input>
+          <input type="text" name="name"></input>
           <br>
-          <label for="Preperation Time">Preperation Time</label>
+          <label for="preptime">Preperation Time</label>
           <br>
-          <input type="text" name="Preperation Time"></input>
+          <input type="text" name="preptime"></input>
           <br>
-          <label for="Cuisine">Cuisine</label>
+          <label for="cuisine">Cuisine</label>
           <br>
-          <input type="text" name="Cuisine"></input>
+          <input type="text" name="cuisine"></input>
           <br>
-          <label for="title">Ingredients</label>
+          <label for="type">Type</label>
           <br>
-          <textarea rows="5" name="Ingredients"></textarea>
+          <input type="text" name=type></input>
           <br>
-          <label for="title">Recipe</label>
+          <label for="ingredeints">Ingredients</label>
           <br>
-          <textarea rows="10" name="Recipe"></textarea>
+          <textarea rows="5" name="ingredients"></textarea>
+          <br>
+          <label for="method">Method</label>
+          <br>
+          <textarea rows="10" name="method"></textarea>
           <br>
           <button type="submit" name="submit">Add</button>
         </form>

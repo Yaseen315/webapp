@@ -8,20 +8,18 @@
         <ul class="tab-content">
             <li class="active"
             <li>hiiujoijopjo</li>
-            <section class="student">
             <li> 
 
-                <% for (var i = 0; i < recipe2.length; i++){ %>
-                    <a href="/detail">
+                <% for (var i = 0; i < recipes.length; i++){ %>
+                    <a href="/detail/<%= recipes[i]._id %>">
                         <img src="turkishpizza.jpg"/>
-                        <h2><%= recipe2[i].name %></h2>
-                        <h4><%= recipe2[i].prepTime %></h4>
-                        <h4><%= recipe2[i].cuisine %></h4>
+                        <h2><%= recipes[i].name %></h2>
+                        <h4><%= recipes[i].preptime %></h4>
+                        <h4><%= recipes[i].cuisine %></h4>
                     </a>
                 <% } %>
 
             </li>
-          </section>
             <li>cdieusdekd</li>
         </ul>     
 <script>
