@@ -4,7 +4,7 @@
         <% for (var i = 0; i < recipes.length; i++){ %>
         <li>
             <a href="/detail/<%= recipes[i]._id %>">
-                <img src="turkishpizza.jpg"/>
+                <img src=<%= recipes[i].image %> />
                 <h2><%= recipes[i].name %></h2>
                 <h4><%= recipes[i].preptime %></h4>
                 <h4><%= recipes[i].cuisine %></h4>

@@ -38,7 +38,6 @@ var recipeController = {
 
   // Handle a form submission and save to DB
   postNew: function(req, res){
-    console.log(req.body)
     // Create a new object from the model...
     var newRecipe = new Recipe(req.body);
     // ...and save it to the DB
@@ -68,4 +67,4 @@ var recipeController = {
 
 
 
-module.exports = recipeController
+module.exports = recipeController;
