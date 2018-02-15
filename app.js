@@ -35,9 +35,11 @@ app.get("/categories", recipeController.getCategories)
 app.post("/add/submit", recipeController.postNew)
 app.post('/detail/:id/delete', recipeController.delete)
 
+var port = process.env.PORT ||'4000';
+app.set('port', 'port');
 
-app.listen(process.env.PORT || 4000);
-  console.log("Server is running");
+app.listen(port, function(){
+ console.log("Server is running");
 });
 
 module.exports = app;
