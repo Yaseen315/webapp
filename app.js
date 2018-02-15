@@ -36,7 +36,7 @@ app.post("/add/submit", recipeController.postNew)
 app.post('/detail/:id/delete', recipeController.delete)
 
 
-app.listen(process.env.PORT || 4000)
+app.listen(process.env.PORT || 4000);
   console.log("Server is running");
 });
 
