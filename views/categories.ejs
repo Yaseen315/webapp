@@ -7,20 +7,28 @@
         </ul>
         <ul class="tab-content">
             <li class="active"
-            <li>hiiujoijopjo</li>
-            <li> 
-
-                <% for (var i = 0; i < recipes.length; i++){ %>
-                    <a href="/detail/<%= recipes[i]._id %>">
-                        <img src="<%= recipes[i].image %>"/>
-                        <h2><%= recipes[i].name %></h2>
-                        <h4><%= recipes[i].preptime %></h4>
-                        <h4><%= recipes[i].cuisine %></h4>
-                    </a>
-                <% } %>
-
+            <li>
+                    <% for (var i = 0; i < recipes.length; i++){ %>
+                        <a href="/detail/<%= recipes[i]._id %>">
+                            <img src="<%= recipes[i].image %>"/>
+                            <h2><%= recipes[i].name %></h2>
+                            <h4><%= recipes[i].preptime %></h4>
+                            <h4><%= recipes[i].cuisine %></h4>
+                        </a>
+                    <% } %>
             </li>
-            <li>cdieusdekd</li>
+            <li> 
+                jkcdsnckdjf
+            </li>
+            <li><% for (var i = 0; i < recipes.length; i++){ %>
+                <a href="/detail/<%= recipes[i]._id %>">
+                    <img src="<%= recipes[i].image %>"/>
+                    <h2><%= recipes[i].name %></h2>
+                    <h4><%= recipes[i].preptime %></h4>
+                    <h4><%= recipes[i].cuisine %></h4>
+                </a>
+            <% } %>
+        </li>
         </ul>     
 <script>
     let navLinks = document.querySelectorAll("ul.tab-navigation li");

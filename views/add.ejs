@@ -2,9 +2,9 @@
 <main>
         <h2>Add Recipe</h2>
         <% if(status === 'success'){ %>
-          <div>Your book was added successfully.</div>
+          <div>Your Recipe was added successfully.</div>
           <% } else if (status === 'error'){ %>
-            <div>There was a problem adding that book. Please check form for errors.</div>
+            <div>There was a problem adding that Recipe. Please check form for errors.</div>
             <% } %>
             
         <form action="/add/submit" method="POST">
@@ -19,10 +19,10 @@
           <label for="preptime">Preperation Time</label>
           <br>
           <select name="preptime">
-              <option value="15 mins">15 mins</option>
-              <option value="30 mins">30 mins</option>
-              <option value="1 hour">1 hour</option>
-              <option value="2 hours">2 hours</option>
+              <option value="15">15 mins</option>
+              <option value="30">30 mins</option>
+              <option value="60">1 hour</option>
+              <option value="120">2 hours</option>
           </select>
           <br>
           <label for="cuisine">Cuisine</label>
